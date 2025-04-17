@@ -29,7 +29,7 @@ class CommentViewSet(viewsets.ModelViewSet):
 
     def get_post(self):
         return get_object_or_404(Post, pk=self.kwargs['post_id'])
-    
+
     def get_queryset(self, ):
         return self.get_post().comments.all()
 
